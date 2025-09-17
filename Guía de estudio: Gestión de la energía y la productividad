@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: La Clave del Alto Rendimiento es la Energía</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .quadrant-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1rem;
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+            aspect-ratio: 1/1;
+        }
+        .axis-label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: #4B5563;
+        }
+        .arrow {
+            position: absolute;
+            color: #FF5733;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#900C3F] mb-2">Domina Tu Energía, No Tu Tiempo</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Descubre cómo la gestión de la energía, no del tiempo, es la verdadera clave para el alto rendimiento y el bienestar sostenible.</p>
+        </header>
+
+        <main>
+
+            <section id="dimensions" class="mb-16">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#C70039]">Las 4 Dimensiones de la Energía</h2>
+                    <p class="mt-2 max-w-2xl mx-auto text-gray-600">Nuestra energía personal es un sistema complejo. Para alcanzar nuestro máximo potencial, debemos nutrir cuatro fuentes distintas pero interconectadas.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl mb-4 text-[#FF5733]">🏃</div>
+                        <h3 class="text-2xl font-bold mb-2">Energía Física</h3>
+                        <p>La base de todo. Se nutre del sueño, la nutrición, el ejercicio y el descanso. Es la cantidad de energía que tenemos.</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl mb-4 text-[#FFC300]">😊</div>
+                        <h3 class="text-2xl font-bold mb-2">Energía Emocional</h3>
+                        <p>La calidad de nuestra energía. Cultivar emociones positivas es vital para el alto rendimiento y la resiliencia.</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl mb-4 text-[#900C3F]">🎯</div>
+                        <h3 class="text-2xl font-bold mb-2">Energía Mental</h3>
+                        <p>La capacidad de enfocar nuestra energía. Se trata de concentrarse intensamente en una sola tarea a la vez.</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl mb-4 text-[#C70039]">🧭</div>
+                        <h3 class="text-2xl font-bold mb-2">Energía Espiritual</h3>
+                        <p>La motivación y el propósito de nuestra energía. Surge de vivir alineado con nuestros valores más profundos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="quadrants" class="mb-16">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#C70039]">Los Cuadrantes de la Energía</h2>
+                    <p class="mt-2 max-w-2xl mx-auto text-gray-600">Tu estado energético cambia constantemente. Estos cuadrantes te ayudan a identificar dónde te encuentras y cómo moverte hacia la zona de rendimiento óptimo.</p>
+                </div>
+
+                <div class="relative flex flex-col items-center">
+                    <div class="axis-label mb-2">Energía Alta</div>
+                     <div class="flex items-center w-full max-w-4xl">
+                        <div class="axis-label -rotate-90 whitespace-nowrap -ml-8 md:-ml-4">Energía Negativa</div>
+                        <div class="quadrant-grid flex-grow">
+                            <div class="bg-[#FFC300] bg-opacity-30 rounded-lg p-4 flex flex-col justify-center items-center text-center">
+                                <h3 class="font-bold text-lg md:text-xl">Zona de Supervivencia</h3>
+                                <p class="text-sm md:text-base">Agotamiento sin renovación. Estrés y frustración.</p>
+                            </div>
+                            <div class="bg-[#DAF7A6] rounded-lg p-4 flex flex-col justify-center items-center text-center">
+                                <h3 class="font-bold text-lg md:text-xl">Zona de Rendimiento</h3>
+                                <p class="text-sm md:text-base">El estado ideal. Enfocado, creativo y realizado.</p>
+                            </div>
+                            <div class="bg-[#FF5733] bg-opacity-40 rounded-lg p-4 flex flex-col justify-center items-center text-center">
+                                <h3 class="font-bold text-lg md:text-xl">Zona de Agotamiento</h3>
+                                <p class="text-sm md:text-base">Sin energía. Pasividad y desmotivación.</p>
+                            </div>
+                             <div class="bg-blue-200 rounded-lg p-4 flex flex-col justify-center items-center text-center border-2 border-dashed border-[#FF5733]">
+                                <h3 class="font-bold text-lg md:text-xl">Zona de Renovación</h3>
+                                <p class="text-sm md:text-base">Clave para recargar. Paz y relajación.</p>
+                            </div>
+                        </div>
+                         <div class="axis-label -rotate-90 whitespace-nowrap -mr-8 md:-mr-4">Energía Positiva</div>
+                    </div>
+                     <div class="axis-label mt-2">Energía Baja</div>
+                     <p class="mt-6 text-center font-semibold text-[#FF5733]">El camino para salir de las zonas negativas siempre es a través de la renovación.</p>
+                </div>
+            </section>
+            
+            <section id="rhythms" class="mb-16">
+                 <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#C70039]">El Ritmo Natural de la Productividad</h2>
+                    <p class="mt-2 max-w-2xl mx-auto text-gray-600">Nuestro cuerpo tiene ciclos naturales de energía. Entenderlos y respetarlos es fundamental para un rendimiento sostenible y para evitar el agotamiento.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-center">El Ritmo Ultradian: Ciclos de 90 Minutos</h3>
+                        <div class="chart-container">
+                            <canvas id="ultradianChart"></canvas>
+                        </div>
+                        <p class="mt-4 text-center text-gray-600">La energía y la concentración alcanzan su punto máximo durante 90 minutos, seguido de un período de 20 minutos de menor energía. Tomar descansos breves y deliberados es crucial para recargar y mantener un alto rendimiento durante todo el día.</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-center">El Mito de la Multitarea</h3>
+                        <div class="chart-container">
+                            <canvas id="multitaskChart"></canvas>
+                        </div>
+                        <p class="mt-4 text-center text-gray-600">Cambiar constantemente de tarea reduce drásticamente la eficiencia. La concentración en una sola tarea (single-tasking) permite un trabajo más profundo, rápido y de mayor calidad. La multitarea es una ilusión que agota tu energía mental.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="rituals" class="mb-16">
+                 <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#C70039]">Construye Tu Sistema: Rituales de Energía</h2>
+                    <p class="mt-2 max-w-3xl mx-auto text-gray-600">La gestión de la energía no es casualidad, es un hábito. Los rituales son comportamientos intencionales y programados que te ayudan a recargar y enfocar tu energía de manera consistente. Así es como se construyen.</p>
+                </div>
+                <div class="max-w-2xl mx-auto">
+                    <div class="space-y-8 relative">
+                        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#FFC300] rounded-full"></div>
+                        <div class="flex items-center relative">
+                            <div class="bg-[#FFC300] text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold z-10">1</div>
+                            <div class="ml-8 bg-white p-6 rounded-lg shadow-md flex-1">
+                                <h4 class="text-xl font-bold">Enfócate en Poco</h4>
+                                <p>Elige solo uno o dos comportamientos a la vez. Intentar cambiar demasiado al mismo tiempo conduce al fracaso. Empieza con un pequeño hábito clave.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center relative">
+                             <div class="bg-[#FF5733] text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold z-10">2</div>
+                            <div class="ml-8 bg-white p-6 rounded-lg shadow-md flex-1">
+                                <h4 class="text-xl font-bold">Sé Ultra-Específico</h4>
+                                <p>No digas "voy a descansar más". Di "Me levantaré de mi escritorio a las 10:30 AM para caminar 5 minutos". La precisión elimina la ambigüedad y facilita la acción.</p>
+                            </div>
+                        </div>
+                         <div class="flex items-center relative">
+                             <div class="bg-[#900C3F] text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold z-10">3</div>
+                            <div class="ml-8 bg-white p-6 rounded-lg shadow-md flex-1">
+                                <h4 class="text-xl font-bold">Anticipa la Resistencia</h4>
+                                <p>Tu cerebro se resistirá al cambio. Es normal. Prepárate para la incomodidad inicial y mantén la disciplina. Después de 30-60 días, el ritual se volverá automático.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <section id="gemini-feature" class="mb-16">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#C70039]">Generador de Rituales Personalizados ✨</h2>
+                    <p class="mt-2 max-w-2xl mx-auto text-gray-600">Describe tu principal desafío de energía (ej. "me siento agotado al final del día") y obtén un ritual personalizado para superarlo.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto">
+                    <textarea id="ritual-prompt" rows="4" class="w-full p-4 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#900C3F]" placeholder="Escribe tu desafío de energía aquí..."></textarea>
+                    <button id="generate-ritual-btn" class="mt-4 w-full bg-[#C70039] text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 hover:bg-[#900C3F] focus:outline-none focus:ring-2 focus:ring-[#900C3F] focus:ring-opacity-50">
+                        Generar Ritual ✨
+                    </button>
+                    <div id="ritual-output" class="mt-6 p-4 bg-gray-50 rounded-lg text-gray-700 leading-relaxed min-h-[100px] flex items-center justify-center text-center">
+                        <p>Tu ritual personalizado aparecerá aquí...</p>
+                    </div>
+                </div>
+            </section>
+
+             <section id="energy-analyst" class="mb-16">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#C70039]">Analista de Energía del Día ✨</h2>
+                    <p class="mt-2 max-w-2xl mx-auto text-gray-600">Escribe un breve diario sobre tu día y obtén un análisis sobre tus puntos de alta y baja energía.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto">
+                    <textarea id="diary-prompt" rows="4" class="w-full p-4 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#900C3F]" placeholder="Ej. 'Tuve una mañana muy productiva después de hacer ejercicio, pero me sentí agotado después de la larga reunión de la tarde...'"></textarea>
+                    <button id="analyze-diary-btn" class="mt-4 w-full bg-[#900C3F] text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 hover:bg-[#C70039] focus:outline-none focus:ring-2 focus:ring-[#C70039] focus:ring-opacity-50">
+                        Analizar Diario ✨
+                    </button>
+                    <div id="analysis-output" class="mt-6 p-4 bg-gray-50 rounded-lg text-gray-700 leading-relaxed min-h-[100px] flex items-center justify-center text-center">
+                        <p>Tu análisis de energía aparecerá aquí...</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <footer class="text-center mt-12 pt-8 border-t border-gray-300">
+            <p class="text-gray-600">Empieza hoy. Elige un pequeño ritual y practícalo. Tu futuro yo te lo agradecerá.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const wrapLabel = (label, maxLength = 16) => {
+                if (label.length <= maxLength) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + word).length > maxLength) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                }
+                lines.push(currentLine.trim());
+                return lines;
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            };
+            
+            const sharedChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                           color: '#4B5563'
+                        },
+                        grid: {
+                            color: '#E5E7EB'
+                        }
+                    },
+                    x: {
+                       ticks: {
+                           color: '#4B5563'
+                        },
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            };
+
+            const ultradianCtx = document.getElementById('ultradianChart').getContext('2d');
+            new Chart(ultradianCtx, {
+                type: 'line',
+                data: {
+                    labels: ['0', '15', '30', '45', '60', '75', '90', '105', '120'],
+                    datasets: [{
+                        label: 'Nivel de Energía',
+                        data: [20, 50, 80, 100, 90, 60, 30, 20, 15],
+                        borderColor: '#FF5733',
+                        backgroundColor: 'rgba(255, 87, 51, 0.2)',
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 0
+                    }]
+                },
+                options: {
+                    ...sharedChartOptions,
+                    scales: {
+                         y: {
+                            ...sharedChartOptions.scales.y,
+                            title: { display: true, text: 'Rendimiento' }
+                         },
+                         x: {
+                            ...sharedChartOptions.scales.x,
+                             title: { display: true, text: 'Minutos' }
+                         }
+                    }
+                }
+            });
+
+            const multitaskCtx = document.getElementById('multitaskChart').getContext('2d');
+            new Chart(multitaskCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Single-Tasking', 'Multitasking'],
+                    datasets: [{
+                        label: 'Eficiencia (%)',
+                        data: [100, 60],
+                        backgroundColor: ['#DAF7A6', '#FFC300'],
+                        borderColor: ['#8CB369', '#D4A017'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    ...sharedChartOptions,
+                    indexAxis: 'y',
+                     scales: {
+                         y: {
+                            ...sharedChartOptions.scales.y,
+                         },
+                         x: {
+                            ...sharedChartOptions.scales.x,
+                             max: 110,
+                             title: { display: true, text: 'Eficiencia (%)' }
+                         }
+                    }
+                }
+            });
+
+            const generateBtn = document.getElementById('generate-ritual-btn');
+            const promptInput = document.getElementById('ritual-prompt');
+            const outputDiv = document.getElementById('ritual-output');
+
+            generateBtn.addEventListener('click', async () => {
+                const userPrompt = promptInput.value;
+                if (!userPrompt) {
+                    outputDiv.innerHTML = '<p class="text-red-500">Por favor, describe tu desafío de energía.</p>';
+                    return;
+                }
+
+                outputDiv.innerHTML = '<p>Cargando... Generando tu ritual personalizado.</p>';
+                
+                const systemPrompt = "Eres un experto en bienestar y gestión de energía. Basado en la teoría de las 4 dimensiones de la energía, el ritmo ultradiano y los rituales, crea un ritual de energía simple y aplicable para el usuario. El ritual debe ser breve, práctico y centrarse en un solo comportamiento. Utiliza un tono motivador y amigable. Responde directamente con el ritual, sin introducciones ni comentarios adicionales.";
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                const payload = {
+                    contents: [{ parts: [{ text: `Desafío de energía del usuario: ${userPrompt}. Genera un ritual de energía para esto.` }] }],
+                    systemInstruction: {
+                        parts: [{ text: systemPrompt }]
+                    },
+                };
+
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    const result = await response.json();
+                    const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                    if (text) {
+                        outputDiv.innerHTML = `<p>${text}</p>`;
+                    } else {
+                        outputDiv.innerHTML = '<p class="text-red-500">Lo siento, no pude generar un ritual. Inténtalo de nuevo.</p>';
+                    }
+                } catch (error) {
+                    console.error('Error al llamar a la API de Gemini:', error);
+                    outputDiv.innerHTML = '<p class="text-red-500">Hubo un error al conectar con el servicio. Por favor, revisa la consola.</p>';
+                }
+            });
+
+            const analyzeBtn = document.getElementById('analyze-diary-btn');
+            const diaryInput = document.getElementById('diary-prompt');
+            const analysisOutput = document.getElementById('analysis-output');
+
+            analyzeBtn.addEventListener('click', async () => {
+                const userDiary = diaryInput.value;
+                if (!userDiary) {
+                    analysisOutput.innerHTML = '<p class="text-red-500">Por favor, escribe un diario de tu día.</p>';
+                    return;
+                }
+
+                analysisOutput.innerHTML = '<p>Analizando tu día... Por favor, espera.</p>';
+
+                const systemPrompt = "Eres un analista de energía personal y bienestar. Analiza el siguiente diario de un día para identificar los momentos de alta y baja energía. Resume los hallazgos en dos puntos clave: 'Puntos de Alta Energía' y 'Puntos de Baja Energía', mencionando brevemente las actividades o causas asociadas. Responde directamente y de forma concisa.";
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                const payload = {
+                    contents: [{ parts: [{ text: `Diario del día: ${userDiary}. Analiza y resume la energía.` }] }],
+                    systemInstruction: {
+                        parts: [{ text: systemPrompt }]
+                    },
+                };
+
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    const result = await response.json();
+                    const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                    if (text) {
+                        analysisOutput.innerHTML = `<p>${text}</p>`;
+                    } else {
+                        analysisOutput.innerHTML = '<p class="text-red-500">Lo siento, no pude analizar tu diario. Inténtalo de nuevo.</p>';
+                    }
+                } catch (error) {
+                    console.error('Error al llamar a la API de Gemini:', error);
+                    analysisOutput.innerHTML = '<p class="text-red-500">Hubo un error al conectar con el servicio. Por favor, revisa la consola.</p>';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
